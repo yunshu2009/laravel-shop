@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
+/*用来创建与后台用户、角色、权限相关的数据库表；*/
 class CreateAdminTables extends Migration
 {
     /**
