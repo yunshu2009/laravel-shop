@@ -11,12 +11,16 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 
+/* 创建控制器方法：php artisan admin:make UsersController --model=App\\Models\\User */
 class UsersController extends Controller
 {
     use ModelForm;
 
     public function index()
     {
+        /*
+        Admin::content() 会根据回调函数来渲染页面，它会自动渲染页面顶部、菜单、底部等公共元素，而我们可以调用 $content 的方法在页面上添加元素来设置不同页面的内容。
+        */
         return Admin::content(function (Content $content) {
             // 页面标题
             $content->header('用户列表');
